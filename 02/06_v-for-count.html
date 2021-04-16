@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 0：引入 vue.js -->
+  <title>Document</title>
+  <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+      ul{
+          list-style: none;
+      }
+
+      ul >li{
+          float: left;
+          border: 1px solid cornflowerblue;
+      }
+  </style>
+</head>
+<body>
+    <div id = "app">
+        <ul>
+            <li v-for="i of pageCount" :key="i">
+                {{k}}：{{val}}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+              teacher:{
+                  name:"东东",
+                  age:18,
+                  addr:"镇海区毓秀路"
+              }
+              
+            }
+        })
+    </script>
+</body>
